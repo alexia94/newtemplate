@@ -22,7 +22,7 @@
 
 
 <?php
-        $json = file_get_contents("provaAlessia.json");
+        $json = file_get_contents("https://alexia94.github.io/newtemplate/prova.json");
         $json_decoded = json_decode($json);
         $data = $json_decoded -> data;
         $jsonArray = json_decode($json, true);
