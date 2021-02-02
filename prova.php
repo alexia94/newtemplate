@@ -7,13 +7,13 @@
 
     <form method="GET" action="">
 
-    <input name="query" type="text">
-    
-    
-    <button type="submit">Esegui</button>
+	    <input name="query" type="text">
 
 
-</form>
+	    <button type="submit">Esegui</button>
+
+
+    </form>
 
 
 
@@ -27,59 +27,64 @@
         $data = $json_decoded -> data;
         $jsonArray = json_decode($json, true);
 
-		function build_row($result) {
-			echo '<tr>';
-            echo '<td>'.$result['_id'].'</td>';
-            echo '<td>'.$result['first_name'].'</td>';
-            echo '<td>'.$result['last_name'].'</td>';
-            echo '<td>'.$result['address'].'</td>';
-            echo '<td>'.$result['phone'].'</td>';
-            echo '<td>'.$result['email'].'</td>';
-            echo '<td>'.$result['__v'].'</td>';
-          	echo '</tr>';
-		}
+	function build_row($result) {
+	    echo '<tr>';
+	    echo '<td>'.$result['_id'].'</td>';
+	    echo '<td>'.$result['first_name'].'</td>';
+	    echo '<td>'.$result['last_name'].'</td>';
+	    echo '<td>'.$result['address'].'</td>';
+	    echo '<td>'.$result['phone'].'</td>';
+	    echo '<td>'.$result['email'].'</td>';
+	    echo '<td>'.$result['__v'].'</td>';
+	    echo '</tr>';
+	}
 
-		$query = "";
+	$query = "";
         $messaggio=0;
 
         if (isset($_GET["query"])) {
 
     		if (empty($_GET["query"])) {
-    	    		echo '<table>';
+    	    		
+			echo '<table>';
     	    		echo '<tr>';
-		            echo '<td>'.'Id'.'</td>';
-		            echo '<td>'.'First Name'.'</td>';
-		            echo '<td>'.'Last Name'.'</td>';
-		            echo '<td>'.'Address'.'</td>';
-		            echo '<td>'.'Phone'.'</td>';
-		            echo '<td>'.'Email'.'</td>';
-		            echo '<td>'.'__v'.'</td>';
-		          	echo '</tr>'; 
-    		        foreach($jsonArray["data"] as $user) {
-    		       			echo build_row($user);
-    				}
-    				echo '</table>';
-                    $messaggio=1;
-    	  		} else {
+		        echo '<td>'.'Id'.'</td>';
+		        echo '<td>'.'First Name'.'</td>';
+		        echo '<td>'.'Last Name'.'</td>';
+		        echo '<td>'.'Address'.'</td>';
+		        echo '<td>'.'Phone'.'</td>';
+		        echo '<td>'.'Email'.'</td>';
+		        echo '<td>'.'__v'.'</td>';
+		        echo '</tr>'; 
+    		        
+			foreach($jsonArray["data"] as $user) {
+    		       		echo build_row($user);
+    			}
+    			
+			echo '</table>';
+			
+                        $messaggio=1;
+			
+    	  	} else {
     	   		
-                $query = $_GET["query"];
+                	$query = $_GET["query"];
         	
-
         		echo '<table>';
         		echo '<tr>';
-	            echo '<td>'.'Id'.'</td>';
-	            echo '<td>'.'First Name'.'</td>';
-	            echo '<td>'.'Last Name'.'</td>';
-	            echo '<td>'.'Address'.'</td>';
-	            echo '<td>'.'Phone'.'</td>';
-	            echo '<td>'.'Email'.'</td>';
-	            echo '<td>'.'__v'.'</td>';
+	            	echo '<td>'.'Id'.'</td>';
+	            	echo '<td>'.'First Name'.'</td>';
+	            	echo '<td>'.'Last Name'.'</td>';
+	            	echo '<td>'.'Address'.'</td>';
+	            	echo '<td>'.'Phone'.'</td>';
+	            	echo '<td>'.'Email'.'</td>';
+	            	echo '<td>'.'__v'.'</td>';
 	          	echo '</tr>';
-                foreach($jsonArray["data"] as $user) {
-            		if($user['first_name'] == $query || $user['last_name'] == $query || $user['email'] == $query) {
-               			echo build_row($user);
-                        $messaggio=+1;
-            		} 
+			
+                	foreach($jsonArray["data"] as $user) {
+            			if($user['first_name'] == $query || $user['last_name'] == $query || $user['email'] == $query) {
+               				echo build_row($user);
+                        		$messaggio=+1;
+            			} 
         		}
         		echo '</table>';
 
