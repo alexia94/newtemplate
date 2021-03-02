@@ -1,0 +1,118 @@
+a:link {color: #800000;}
+a:visited {color: #800000;}
+a:active {color: #800000;}
+a {text-decoration: none;}
+body {
+	background-color: #FFFFFF;
+	font-family: Verdana, Sans Serif;
+	font-size: 8pt;
+	color: #800000;
+}
+p,p.normale {
+	color: black;
+	text-align: justify;
+	font-size: 8pt;
+	margin-left: 1cm;
+}
+p.zero1,p.zero2,p.zero3,p.zero4,p.zero5,p.zero6,p.zero7,p.zero8 {
+	font-family: Verdana, Sans Serif;
+	color: black;
+	text-align: justify;
+	font-size: 8pt;
+	margin-left: 2cm;
+	margin-right: 2cm;
+	text-indent: -1.5em;
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+}
+
+p.dentrozero {
+	font-family: Verdana, Sans Serif;
+	color: black;
+	text-align: justify;
+	font-size: 8pt;
+	margin-left: 2cm;
+	margin-right: 2cm;
+	margin-top: 0.25em;
+	margin-bottom: 0.25em;
+
+}
+p.definizione {
+	color: #800000;
+	text-align: justify;
+	font-size: 10pt;
+	margin-left: 2cm;
+	margin-right: 2cm;
+	margin-top: 0.5cm;
+	margin-bottom: 0.25cm;
+}
+p.def1 {
+	color: black;
+	text-align: justify;
+	font-size: 12pt;
+	margin-left: 1cm;
+}
+p.def2 {
+	color: #800000;
+	text-align: justify;
+	font-size: 8pt;
+	margin-left: 2.1cm;
+	margin-right: 2cm;
+	margin-top: 0.5cm;
+	margin-bottom: 0.25cm;
+}
+p.def3 {
+	color: #800000;
+	text-align: justify;
+	font-size: 8pt;
+	margin-left: 2.2cm;
+	margin-right: 2cm;
+	margin-top: 0.5cm;
+	margin-bottom: 0.25cm;
+}
+p.def4 {
+	color: Black;
+	text-align: center;
+	font-size: 6pt;
+	margin-left: 2cm;
+	margin-right: 2cm;
+	margin-top: 0.5cm;
+	margin-bottom: 0.25cm;
+}
+p.sottodefinizione {
+	color: #800000;
+	text-align: justify;
+	font-size: 8pt;
+	margin-left: 2.5cm;
+	margin-right: 2cm;
+	margin-top: 0.5cm;
+	margin-bottom: 0.25cm;
+}
+p.esempio {
+	color: black;
+	text-align: justify;
+	font-size: 7pt;
+	margin-left: 3cm;
+	margin-right: 2cm;
+	margin-top: 0.25cm;
+	margin-bottom: 0.25cm;
+}
+div#tabs {
+	margin-left: 2.1cm;
+	margin-right: 2cm;
+	margin-top: 0.5cm;
+	margin-bottom: 0.25cm;
+}
+div#results td{
+	font-size: 8pt;
+}
+div#ricercheAv {
+	font-size: 9pt;
+}
+div#ricercheAv td{
+	color: black;
+	font-size: 9pt;
+}
+div#ricercheAv form{
+	background-color: #EEEEEE;
+}
